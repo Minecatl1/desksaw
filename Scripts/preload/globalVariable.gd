@@ -95,6 +95,9 @@ func _apply_renderer_and_restart(use_vulkan: bool) -> void:
 #????????????????
 var userSkinPath = "user://skin/Body/"
 
+# Android-specific variables
+var gyroGravityEnabled: bool = OS.get_name() == "Android"
+var apply_central_force: bool = OS.get_name() == "Android"
 
 func getNumFromString(inputString: String):
 	var number_string = ""
